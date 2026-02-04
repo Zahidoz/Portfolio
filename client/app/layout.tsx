@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className} bg-secondary text-primary flex w-full min-h-screen`}>
+      <body className={`${dmSans.className} bg-secondary text-primary flex flex-col-reverse xl:flex-row w-full min-h-screen`}>
         {children}
         <StickySide />
       </body>
