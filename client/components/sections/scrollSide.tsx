@@ -1,5 +1,4 @@
 import { userData } from "@/data/userData";
-import { projectsData } from "@/data/userData";
 
 export default function ScrollSide() {
   return (
