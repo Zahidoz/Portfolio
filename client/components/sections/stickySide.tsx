@@ -2,7 +2,7 @@ import { userData } from "@/data/userData";
 
 export default function StickySide() {
   return (
-    <div className="xl:flex-1 w-full py-16  bg-primary text-secondary flex flex-col gap-6 md:gap-11 items-center justify-center ">
+    <div className="xl:flex-1 w-full py-16 xl:py-0 xl:sticky xl:top-0 xl:h-screen bg-primary text-secondary flex flex-col gap-6 md:gap-11 items-center justify-center">
       <h1 className="text-5xl md:text-6xl lg:text-7xl text-center px-5">{userData.fullName}</h1>
       <div className="w-[266px] h-[405px] lg:w-[295px] lg:h-[450px]">
         <img className="w-full h-full object-cover" src={userData.profilePicture} alt="" />

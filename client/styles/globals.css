@@ -4,3 +4,7 @@
   --color-secondary: #f9f7eb;
 }
 
+body {
+  box-sizing: border-box;
+}
+
