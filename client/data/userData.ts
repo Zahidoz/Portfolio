@@ -1,5 +1,5 @@
 export const userData = {
-    profilePicture: "me.jpeg",
+    profilePicture: "me.png",
     fullName: "Zahid Vahabzade",
     speciality: "Software Developer and <br /> Project Manager",
     about: {
