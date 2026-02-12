@@ -61,4 +61,21 @@ export const userData = {
     location: "Icherisheher, Baku, Azerbaijan"
 }
 
+export const projectsData = [
+    {
+        thumbail: "/projects/project1/cover.png",
+        url: "https://eigen.az/",
+        images: [],
+        title: "Eigen LLC Website",
+        subtitle: "Digital engineering and data solutions for the oil & gas industry. Domain expertise. Smart, real-time insights.",
+    },
+    {
+        thumbail: "/projects/project2/cover.png",
+        url: "https://adam-s.vercel.app/",
+        images: [],
+        title: "Adams Digital Agency",
+        subtitle: "Agency serving brands like Samsung and ITicket.az. Created interactive, professional web interfaces.",
+    }
+]
+
  

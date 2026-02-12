@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { userData } from "@/data/userData";
+import { projectsData, userData } from "@/data/userData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +25,7 @@ export default function ScrollSide() {
           opacity: 0,
           y: 20,
         });
-        
+
         gsap.set(divider, {
           scaleX: 0,
           transformOrigin: "left center",
@@ -52,18 +52,18 @@ export default function ScrollSide() {
           duration: 0.8,
           ease: "power3.out",
         })
-        .to(divider, {
-          scaleX: 1,
-          duration: 0.8,
-          ease: "power2.inOut",
-        }, "-=0.5")
-        .to(content, {
-          opacity: 1,
-          y: 0,
-          duration: 0.7,
-          stagger: 0.12,
-          ease: "power3.out",
-        }, "-=0.4");
+          .to(divider, {
+            scaleX: 1,
+            duration: 0.8,
+            ease: "power2.inOut",
+          }, "-=0.5")
+          .to(content, {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+            stagger: 0.12,
+            ease: "power3.out",
+          }, "-=0.4");
       });
     }, containerRef);
 
@@ -97,6 +97,27 @@ export default function ScrollSide() {
                 <h3 className="text-[18px] font-[500] mt-0.5 leading-[19px] tracking-[.2px]">{exp.title}</h3>
                 <h4 className="text-[16px] font-[400] tracking-[.1px]">{exp.subtitle}</h4>
                 <p className="text-[16px]  font-light leading-[22.4px] pr-1 tracking-[.1px]">{exp.description}</p>
+              </div>
+
+            ))
+          }
+        </div>
+        
+         <div className="flex flex-col gap-10 xl:gap-6">
+          <div>
+            <h2 className="text-[19px] font-[600] uppercase tracking-[2.1px] mb-[7px]">FEATURED PROJECTS</h2>
+            <div className="w-full h-0.5 bg-[#1f4c3466]"></div>
+          </div>
+          {
+            projectsData.map((project, idx) => (
+              <div key={idx} className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-[9px]">
+                <a href={project.url} className="w-full h-auto xl:w-50 xl:min-w-60 xl:h-36.5 rounded-xl overflow-hidden" target="_blank" rel="noopener noreferrer">
+                  <img className="w-full h-full object-cover hover:scale-102 transition-transform duration-300" src={project.thumbail} alt={project.title} />
+                </a>
+                <div className="flex flex-col gap-[10px]">
+                  <h3 className="text-[18px] font-[500] mt-0.5 leading-[19px] tracking-[.2px]">{project.title}</h3>
+                  <p className="text-[16px]  font-light leading-[22.4px] pr-1 tracking-[.1px]">{project.subtitle}</p>
+                </div>
               </div>
 
             ))
